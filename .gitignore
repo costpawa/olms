@@ -1,0 +1,4 @@
+/.idea
+/.travis.yml
+/laravel-json-api/.env
+/vue-material-dashboard/.env
