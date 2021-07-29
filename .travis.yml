@@ -1,0 +1,14 @@
+language: php
+php:
+  - 7.2
+before_script:
+  - composer self-update
+  - composer install --no-interaction
+script:
+  - vendor/bin/phpunit
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: vendor/bin/dep deploy
+  on:
+    branch: master
