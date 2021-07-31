@@ -8,11 +8,7 @@ before_script:
   - composer self-update --2
   - composer update
   - composer install --no-interaction
-  - git clone https://github.com/Laradock/laradock.git
-  - cd laradock
-  - cp .env.example .env
-  - sudo docker-compose up -d nginx mysql phpmyadmin redis workspace
-  - cd ../../vue-material-dashboard
+  - cd ../vue-material-dashboard
   - npm run dev
 script:
   - cd laravel-json-api
