@@ -9,7 +9,8 @@ before_script:
   - composer update
   - composer install --no-interaction
   - cd ../vue-material-dashboard
-  - npm run dev
+  - npm install -g @vue/cli
+  - npm run build
 script:
   - cd laravel-json-api
   - vendor/bin/phpunit
