@@ -1,23 +1,36 @@
-language: php
-sudo: required
-dist: trusty
-php:
-  - 7.4
-before_script:
-  - cd laravel-json-api
-  - composer self-update --2
-  - composer update
-  - composer install --no-interaction
-  - cd ../vue-material-dashboard
-  - npm install -g @vue/cli
-  - npm run build
-script:
-  - cd laravel-json-api
-  - vendor/bin/phpunit
-  - php artisan code:analyse
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: vendor/bin/dep deploy
-  on:
-    branch: master
+jobs:
+  include:
+    - language: php
+      sudo: required
+      dist: trusty
+      php:
+        - 7.4
+      before_script:
+        - cd laravel-json-api
+        - composer self-update --2
+        - composer update
+        - composer install --no-interaction
+      script:
+        - cd laravel-json-api
+        - vendor/bin/phpunit
+        - php artisan code:analyse
+      deploy:
+        skip_cleanup: true
+        provider: script
+        script: vendor/bin/dep deploy
+        on:
+          branch: master
+    - language: node_js
+      node_js:
+        - "node"
+      cache: npm
+      before_script:
+        - cd vue-material-dashboard
+        - npm install -g @vue/cli
+        - npm run build
+      script: npm run build
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        on:
+          branch: master
