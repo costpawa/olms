@@ -14,7 +14,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/scrivo/highlight.php" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/spatie/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/vlucas/phpdotenv" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/laminas/laminas-zendframework-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/laminas/laminas-diactoros" />
@@ -96,8 +95,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/dragonmantank/cron-expression" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/jakub-onderka/php-console-highlighter" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/justinrainbow/json-schema" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/phpdocumentor/type-resolver" />
@@ -128,6 +125,9 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/symfony/deprecation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/react/promise" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-color" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-highlighter" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/lcobucci/clock" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -10,7 +10,6 @@
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/spatie/laravel-cors" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/laravel-json-api/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/laminas/laminas-diactoros" />
@@ -92,8 +91,6 @@
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/laravel-json-api/vendor/jakub-onderka/php-console-highlighter" />
-      <path value="$PROJECT_DIR$/laravel-json-api/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/justinrainbow/json-schema" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/phpdocumentor/type-resolver" />
@@ -124,9 +121,12 @@
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-color" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/lcobucci/clock" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpUnit">
