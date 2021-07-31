@@ -118,6 +118,12 @@
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/laravel-json-api/vendor/react/promise" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2">

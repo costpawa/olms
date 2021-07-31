@@ -122,6 +122,12 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/facade/ignition-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/symfony/http-client-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/react/promise" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
