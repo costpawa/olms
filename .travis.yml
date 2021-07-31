@@ -8,8 +8,6 @@ before_script:
   - composer self-update --2
   - composer update
   - composer install --no-interaction
-  - cd laradock
-  - sudo docker-compose up -d nginx mysql phpmyadmin redis workspace
   - cd ./vue-material-dashboard
   - npm run dev
 script:
