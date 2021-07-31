@@ -10,10 +10,6 @@ jobs:
         - composer self-update --2
         - composer update
         - composer install --no-interaction
-      script:
-        - cd laravel-json-api
-        - vendor/bin/phpunit
-        - php artisan code:analyse
       deploy:
         skip_cleanup: true
         provider: script
@@ -27,7 +23,6 @@ jobs:
       before_script:
         - cd vue-material-dashboard
         - npm install -g @vue/cli
-        - npm run build
       script: npm run build
       deploy:
         provider: pages
