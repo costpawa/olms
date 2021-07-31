@@ -13,7 +13,8 @@ before_script:
   - cd ./vue-material-dashboard
   - npm run dev
 script:
-  - laravel-json-api/vendor/bin/phpunit
+  - cd laravel-json-api
+  - vendor/bin/phpunit
   - php artisan code:analyse
 deploy:
   skip_cleanup: true
