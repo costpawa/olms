@@ -212,7 +212,7 @@ $scaleSize: 0.95;
 .md-card{
   margin: 30px 0;
 }
-.btn-primary{
+.btn-primary, .btn-info{
   cursor: pointer;
 }
 </style>

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use GuzzleHttp\Client;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
-use GuzzleHttp\Exception\ClientException;
 use CloudCreativity\LaravelJsonApi\Document\Error;
 use CloudCreativity\LaravelJsonApi\Http\Controllers\JsonApiController;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
-class StudentController extends JsonApiController
+class BookController extends JsonApiController
 {
     /**
      * Update the specified resource.
@@ -18,7 +18,7 @@ class StudentController extends JsonApiController
      * @param Request $request
      * @return JsonResponse
      */
-    public function createStudent(Request $request): JsonResponse
+    public function createBook(Request $request): JsonResponse
     {
         $http = new Client(['verify' => false]);
 
@@ -33,7 +33,7 @@ class StudentController extends JsonApiController
         ];
 
         try {
-            $response = $http->patch(route('api:v1:students.create', ['record' => auth()->id()]), $data);
+            $response = $http->patch(route('api:v1:books.create', ['record' => auth()->id()]), $data);
         } catch (ClientException $e) {
 
             $errors = json_decode($e->getResponse()->getBody()->getContents(), true)['errors'];

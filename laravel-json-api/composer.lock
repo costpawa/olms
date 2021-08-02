@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccefe3a7e9af77b7afd9b31376790b8e",
+    "content-hash": "6e14937167d5b05ab174b0da0139d5fb",
     "packages": [
         {
             "name": "cloudcreativity/laravel-json-api",
@@ -8861,7 +8861,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4",
+        "php": "^7.4 | ^8.0",
         "ext-json": "*"
     },
     "platform-dev": [],
