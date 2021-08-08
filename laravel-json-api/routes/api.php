@@ -27,6 +27,6 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->patch('me', 'Api\V1\MeController@updateProfile');
     $api->resource('users');
 
-    $api->resource('books', 'Api\V1\BookController@createBook');
+    //$api->resource('books', 'Api\V1\BookController@createBook');
 
 });

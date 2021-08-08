@@ -127,7 +127,6 @@
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/react/promise" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-highlighter" />
-      <excludeFolder url="file://$MODULE_DIR$/laravel-json-api/vendor/lcobucci/clock" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

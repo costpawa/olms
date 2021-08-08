@@ -123,7 +123,6 @@
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/react/promise" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-color" />
       <path value="$PROJECT_DIR$/laravel-json-api/vendor/php-parallel-lint/php-console-highlighter" />
-      <path value="$PROJECT_DIR$/laravel-json-api/vendor/lcobucci/clock" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
