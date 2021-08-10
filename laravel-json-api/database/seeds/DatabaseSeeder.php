@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         $this->call(UsersSeeder::class);
+        $this->call(BooksSeeder::class);
     }
 }

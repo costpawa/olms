@@ -15,7 +15,7 @@ class MeController extends JsonApiController
      * @param Request $request
      * @return JsonResponse
      */
-    public function readProfile(Request $request)
+    public function readProfile(Request $request): JsonResponse
     {
         $http = new Client(['verify' => false]);
 
@@ -60,7 +60,7 @@ class MeController extends JsonApiController
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function updateProfile(Request $request)
+    public function updateProfile(Request $request): JsonResponse
     {
         $http = new Client(['verify' => false]);
 
@@ -106,7 +106,7 @@ class MeController extends JsonApiController
      * @param array $headers
      * @return array
      */
-    protected function parseHeaders($headers)
+    protected function parseHeaders(array $headers): array
     {
         return collect($headers)->map(function ($item) {
             return $item[0];

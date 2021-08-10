@@ -1,8 +1,8 @@
 <?php
 
-namespace App\JsonApi\V1\Students;
+namespace App\JsonApi\V1\Books;
 
-use App\Models\Student;
+use App\Models\Book;
 use CloudCreativity\LaravelJsonApi\Eloquent\AbstractAdapter;
 use CloudCreativity\LaravelJsonApi\Pagination\StandardStrategy;
 use Illuminate\Database\Eloquent\Builder;
@@ -32,7 +32,7 @@ class Adapter extends AbstractAdapter
      */
     public function __construct(StandardStrategy $paging)
     {
-        parent::__construct(new Student(), $paging);
+        parent::__construct(new Book(), $paging);
     }
 
     /**
@@ -44,4 +44,5 @@ class Adapter extends AbstractAdapter
     {
         $this->filterWithScopes($query, $filters);
     }
+
 }

@@ -33,7 +33,7 @@ class BookController extends JsonApiController
         ];
 
         try {
-            $response = $http->patch(route('api:v1:books.create', ['record' => auth()->id()]), $data);
+            $response = $http->post(route('api:v1:books.create'), $data);
         } catch (ClientException $e) {
 
             $errors = json_decode($e->getResponse()->getBody()->getContents(), true)['errors'];
@@ -61,7 +61,7 @@ class BookController extends JsonApiController
      * @param array $headers
      * @return array
      */
-    protected function parseHeaders($headers)
+    protected function parseHeaders(array $headers): array
     {
         return collect($headers)->map(function ($item) {
             return $item[0];

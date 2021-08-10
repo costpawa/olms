@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
             $table->string('title', 100);
             $table->string('authors', 20);
             $table->string('categories', 20);
-            $table->tinyInteger('type')->unsigned();
+            $table->tinyInteger('genre')->unsigned();
             $table->smallInteger('number_of_pages')->unsigned();
             $table->integer('publisher_id')->unsigned();
             $table->date('release_date');

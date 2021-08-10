@@ -64,8 +64,8 @@
               </div>
               <div class="md-layout-item md-size-50 md-small-size-100">
                 <md-field>
-                  <label for="type">Type*</label>
-                  <md-select v-model="datas.type" name="type" id="type">
+                  <label for="genre">Genre*</label>
+                  <md-select v-model="datas.genre" name="genre" id="genre">
                     <md-option value="1">Novel</md-option>
                     <md-option value="2">Encyclopedia</md-option>
                   </md-select>
@@ -120,11 +120,11 @@ export default {
         numberOfPages: null,
         authors: [],
         categories: [],
-        type: "",
+        genre: "",
         publisher: "",
         releaseDate: "",
         languages: "",
-        dateFormat: "dd-MM-yyyy",
+        dateFormat: "yyyy-MM-dd",
         firstDayOfAWeek: "Monday",
       }
     }

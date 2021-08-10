@@ -17,7 +17,7 @@ class Book extends Model
         'title',
         'authors',
         'categories',
-        'type',
+        'genre',
         'number_of_pages',
         'publisher_id',
         'release_date',

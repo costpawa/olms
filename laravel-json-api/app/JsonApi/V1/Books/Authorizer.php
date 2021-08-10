@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonApi\V1\Students;
+namespace App\JsonApi\V1\Books;
 
 use CloudCreativity\LaravelJsonApi\Auth\AbstractAuthorizer;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -18,10 +18,10 @@ class Authorizer extends AbstractAuthorizer
      * @param Request $request
      *      the inbound request.
      * @return bool
-     * @throws AuthenticationException if the request is not authorized.
-     * @throws AuthorizationException if the request is not authorized.
+     * @throws AuthenticationException|AuthorizationException
+     *      if the request is not authorized.
      */
-    public function index($type, $request): bool
+    public function index($type, $request)
     {
         return true;
     }
