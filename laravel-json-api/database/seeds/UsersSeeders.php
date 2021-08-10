@@ -14,9 +14,9 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        Schema::disableForeignKeyConstraints();
-        DB::table('users')->truncate();
-        Schema::enableForeignKeyConstraints();
+//        Schema::disableForeignKeyConstraints();
+//        DB::table('users')->truncate();
+//        Schema::enableForeignKeyConstraints();
 
         User::create([
             'name' => 'Admin',

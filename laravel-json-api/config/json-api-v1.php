@@ -55,7 +55,10 @@ return [
     'resources' => [
         'profile' => \App\Models\User::class,
         'users' => \App\Models\User::class,
-        'books' => \App\Models\Book::class
+        'books' => \App\Models\Book::class,
+        'authors' => \App\Models\Author::class,
+        'genres' => \App\Models\Genre::class,
+        'publishers' => \App\Models\Publisher::class,
     ],
 
     /*

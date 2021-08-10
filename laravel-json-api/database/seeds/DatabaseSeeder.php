@@ -13,11 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Schema::disableForeignKeyConstraints();
-        DB::table('users')->truncate();
-        Schema::enableForeignKeyConstraints();
+//        Schema::disableForeignKeyConstraints();
+//        DB::table('users')->truncate();
+//        Schema::enableForeignKeyConstraints();
 
+        $this->call(PublishersSeeder::class);
         $this->call(UsersSeeder::class);
         $this->call(BooksSeeder::class);
+        $this->call(AuthorsSeeder::class);
+        $this->call(GenresSeeder::class);
     }
 }

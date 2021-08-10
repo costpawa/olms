@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonApi\V1\Books;
+namespace App\JsonApi\V1\Publishers;
 
 use Neomerx\JsonApi\Schema\SchemaProvider;
 
@@ -10,7 +10,7 @@ class Schema extends SchemaProvider
     /**
      * @var string
      */
-    protected $resourceType = 'books';
+    protected $resourceType = 'publishers';
 
     /**
      * @param $resource
@@ -30,13 +30,15 @@ class Schema extends SchemaProvider
     public function getAttributes($resource)
     {
         return [
-            'isbn13' => $resource->isbn13,
-            'isbn10' => $resource->isbn10,
-            'title' => $resource->title,
-            'number_of_pages' => $resource->number_of_pages,
-            'release_date' => $resource->release_date,
-            'created_at' => optional($resource->created_at)->format("Y-m-d H:s:i"),
-            'updated_at' => optional($resource->updated_at)->format("Y-m-d H:s:i"),
+            'name' => $resource->name,
+            'phone' => $resource->phone,
+            'email' => $resource->email,
+            'website' => $resource->website,
+            'address' => $resource->address,
+            'country' => $resource->country,
+            'logo' => $resource->logo,
+            'created-at' => $resource->created_at->toAtomString(),
+            'updated-at' => $resource->updated_at->toAtomString(),
         ];
     }
 }

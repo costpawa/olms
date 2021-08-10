@@ -25,8 +25,11 @@ Route::namespace('Api\V1\Auth')->prefix('api/v1')->middleware('json.api')->group
 JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->get('me', 'Api\V1\MeController@readProfile');
     $api->patch('me', 'Api\V1\MeController@updateProfile');
-    $api->resource('users');
 
+    $api->resource('users');
     $api->resource('books');
+    $api->resource('authors');
+    $api->resource('genres');
+    $api->resource('publishers');
 
 });
