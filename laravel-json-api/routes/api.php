@@ -31,5 +31,6 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->resource('authors');
     $api->resource('genres');
     $api->resource('publishers');
+    $api->resource('languages');
 
 });

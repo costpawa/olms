@@ -59,6 +59,7 @@ return [
         'authors' => \App\Models\Author::class,
         'genres' => \App\Models\Genre::class,
         'publishers' => \App\Models\Publisher::class,
+        'languages' => \App\Models\Language::class,
     ],
 
     /*

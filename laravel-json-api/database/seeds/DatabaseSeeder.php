@@ -17,8 +17,9 @@ class DatabaseSeeder extends Seeder
 //        DB::table('users')->truncate();
 //        Schema::enableForeignKeyConstraints();
 
-        $this->call(PublishersSeeder::class);
+        $this->call(LanguagesSeeder::class);
         $this->call(UsersSeeder::class);
+        $this->call(PublishersSeeder::class);
         $this->call(BooksSeeder::class);
         $this->call(AuthorsSeeder::class);
         $this->call(GenresSeeder::class);
