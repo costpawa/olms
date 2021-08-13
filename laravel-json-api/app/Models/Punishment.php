@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Genre extends Model
+class Punishment extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -13,6 +13,8 @@ class Genre extends Model
      */
     protected $fillable = [
         'name',
-        'sorting'
+        'description',
+        'has_expiration',
+        'default_expiration_date'
     ];
 }

@@ -60,6 +60,9 @@ return [
         'genres' => \App\Models\Genre::class,
         'publishers' => \App\Models\Publisher::class,
         'languages' => \App\Models\Language::class,
+        'members' => \App\Models\Member::class,
+        'member-types' => \App\Models\MemberType::class,
+        'punishments' => \App\Models\Punishment::class,
     ],
 
     /*

@@ -18,7 +18,8 @@ class PublishersSeeder extends Seeder
             'email' => 'info@panamayayincilik.com',
             'website' => 'www.panamayayincilik.com',
             'address' => 'Yüksel Caddesi 7A/7 - Kızılay/ANKARA',
-            'country' => 1
+            'country' => 1,
+            'logo' => "panama-yayincilik.jpg"
         ]);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonApi\V1\Genres;
+namespace App\JsonApi\V1\Punishments;
 
 use Neomerx\JsonApi\Schema\SchemaProvider;
 
@@ -10,7 +10,7 @@ class Schema extends SchemaProvider
     /**
      * @var string
      */
-    protected $resourceType = 'genres';
+    protected $resourceType = 'punishments';
 
     /**
      * @param $resource
@@ -31,7 +31,9 @@ class Schema extends SchemaProvider
     {
         return [
             'name' => $resource->name,
-            'sorting' => $resource->sorting,
+            'description' => $resource->description,
+            'has_expiration' => $resource->has_expiration,
+            'expiration_date' => $resource->expiration_date,
             'created-at' => $resource->created_at->toAtomString(),
             'updated-at' => $resource->updated_at->toAtomString(),
         ];

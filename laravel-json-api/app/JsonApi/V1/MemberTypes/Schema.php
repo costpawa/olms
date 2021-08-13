@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonApi\V1\Genres;
+namespace App\JsonApi\V1\MemberTypes;
 
 use Neomerx\JsonApi\Schema\SchemaProvider;
 
@@ -10,7 +10,7 @@ class Schema extends SchemaProvider
     /**
      * @var string
      */
-    protected $resourceType = 'genres';
+    protected $resourceType = 'member-types';
 
     /**
      * @param $resource
@@ -31,6 +31,8 @@ class Schema extends SchemaProvider
     {
         return [
             'name' => $resource->name,
+            'point' => $resource->point,
+            'color' => $resource->color,
             'sorting' => $resource->sorting,
             'created-at' => $resource->created_at->toAtomString(),
             'updated-at' => $resource->updated_at->toAtomString(),

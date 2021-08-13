@@ -13,15 +13,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-//        Schema::disableForeignKeyConstraints();
-//        DB::table('users')->truncate();
-//        Schema::enableForeignKeyConstraints();
+        Schema::disableForeignKeyConstraints();
+        DB::table('users')->truncate();
+        DB::table('books')->truncate();
+        DB::table('authors')->truncate();
+        DB::table('genres')->truncate();
+        DB::table('publishers')->truncate();
+        DB::table('languages')->truncate();
+        DB::table('members')->truncate();
+        DB::table('member_types')->truncate();
+        DB::table('punishments')->truncate();
+        Schema::enableForeignKeyConstraints();
 
-        $this->call(LanguagesSeeder::class);
         $this->call(UsersSeeder::class);
-        $this->call(PublishersSeeder::class);
         $this->call(BooksSeeder::class);
         $this->call(AuthorsSeeder::class);
         $this->call(GenresSeeder::class);
+        $this->call(PublishersSeeder::class);
+        $this->call(LanguagesSeeder::class);
+        $this->call(MemberSeeder::class);
+        $this->call(MemberTypeSeeder::class);
+        $this->call(PunishmentSeeder::class);
     }
 }
