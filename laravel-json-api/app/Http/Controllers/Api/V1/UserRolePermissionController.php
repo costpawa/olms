@@ -9,7 +9,7 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class UserRoleController extends JsonApiController
+class UserRolePermissionController extends JsonApiController
 {
     /**
      * Update the specified resource.
@@ -21,11 +21,8 @@ class UserRoleController extends JsonApiController
     public function getUserRole(Request $request): JsonResponse
     {
         $http = new Client(['verify' => false]);
-
-        $headers = $this->parseHeaders($request->header());
-
+        $headers = parseHeaders($request->header());
         $input = $request->json()->all();
-
         $data = [
             'headers' => $headers,
             'json' => $input,
@@ -47,7 +44,7 @@ class UserRoleController extends JsonApiController
 
         $responseBody = json_decode((string)$response->getBody(), true);
         $responseStatus = $response->getStatusCode();
-        $responseHeaders = $this->parseHeaders($response->getHeaders());
+        $responseHeaders = parseHeaders($response->getHeaders());
 
         unset($responseHeaders['Transfer-Encoding']);
 

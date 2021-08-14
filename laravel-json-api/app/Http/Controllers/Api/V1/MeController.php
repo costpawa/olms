@@ -19,16 +19,12 @@ class MeController extends JsonApiController
     {
         $http = new Client(['verify' => false]);
 
-        $headers = $this->parseHeaders($request->header());
+        $headers = parseHeaders($request->header());
 
         $headers = [
             'Accept' => 'application/vnd.api+json',
             'Authorization' => $headers['authorization']
         ];
-
-        $input = $request->json()->all();
-        $input['data']['id'] = (string)auth()->id();
-        $input['data']['type'] = 'users';
 
         $data = [
             'headers' => $headers,
@@ -40,7 +36,7 @@ class MeController extends JsonApiController
 
             $responseBody = json_decode((string)$response->getBody(), true);
             $responseStatus = $response->getStatusCode();
-            $responseHeaders = $this->parseHeaders($response->getHeaders());
+            $responseHeaders = parseHeaders($response->getHeaders());
 
             unset($responseHeaders['Transfer-Encoding']);
 
@@ -58,13 +54,13 @@ class MeController extends JsonApiController
      * Not named update because it conflicts with JsonApiController update method signature
      *
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function updateProfile(Request $request): JsonResponse
     {
         $http = new Client(['verify' => false]);
 
-        $headers = $this->parseHeaders($request->header());
+        $headers = parseHeaders($request->header());
 
         $input = $request->json()->all();
 
@@ -92,24 +88,10 @@ class MeController extends JsonApiController
 
         $responseBody = json_decode((string)$response->getBody(), true);
         $responseStatus = $response->getStatusCode();
-        $responseHeaders = $this->parseHeaders($response->getHeaders());
+        $responseHeaders = parseHeaders($response->getHeaders());
 
         unset($responseHeaders['Transfer-Encoding']);
 
         return response()->json($responseBody, $responseStatus)->withHeaders($responseHeaders);
-    }
-
-    /**
-     * Parse headers to collapse internal arrays
-     * TODO: move to helpers
-     *
-     * @param array $headers
-     * @return array
-     */
-    protected function parseHeaders(array $headers): array
-    {
-        return collect($headers)->map(function ($item) {
-            return $item[0];
-        })->toArray();
     }
 }

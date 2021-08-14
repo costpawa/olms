@@ -34,5 +34,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MemberSeeder::class);
         $this->call(MemberTypeSeeder::class);
         $this->call(PunishmentSeeder::class);
+        $this->call(PermissionsDemoSeeder::class);
     }
 }

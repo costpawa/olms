@@ -26,7 +26,7 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->get('me', 'Api\V1\MeController@readProfile');
     $api->patch('me', 'Api\V1\MeController@updateProfile');
 
-    $api->get('get-user-role', 'Api\V1\UserRoleController@getUserRole');
+    $api->get('get-user-role', 'Api\V1\UserRolePermissionController@getUserRole');
 
     $api->resource('users');
     $api->resource('books');
@@ -37,5 +37,7 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->resource('members');
     $api->resource('member-types');
     $api->resource('punishments');
+    $api->resource('roles');
+    $api->resource('permissions');
 
 });
