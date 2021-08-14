@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Facades\Hash;
-use App\Permissions\HasPermissionsTrait;
 use Illuminate\Notifications\Notifiable;
 use App\Notifications\Auth\ResetPasswordNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable, HasPermissionsTrait;
+    use HasApiTokens, Notifiable;
 
     /**
      * The attributes that are mass assignable.
