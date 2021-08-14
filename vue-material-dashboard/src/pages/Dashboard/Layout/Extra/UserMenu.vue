@@ -50,7 +50,6 @@ export default {
     return {
       isClosed: true,
       title: 'Profile',
-      role: 'Amdin',
       rtlTitle: "تانيا أندرو",
       avatar: process.env.VUE_APP_APP_BASE_URL + "/img/faces/marc.jpg"
     };
