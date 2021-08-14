@@ -26,14 +26,14 @@
             <slot>
               <li>
                 <a @click="goToProfile">
-                  <span class="sidebar-mini">P</span>
-                  <span class="sidebar-normal">Profilim</span>
+                  <span class="sidebar-mini">MP</span>
+                  <span class="sidebar-normal">My Profile</span>
                 </a>
               </li>
               <li>
                 <a @click="logout">
-                  <span class="sidebar-mini">Ç</span>
-                  <span class="sidebar-normal">Çıkış</span>
+                  <span class="sidebar-mini">L</span>
+                  <span class="sidebar-normal">Logout</span>
                 </a>
               </li>
             </slot>
@@ -50,6 +50,7 @@ export default {
     return {
       isClosed: true,
       title: 'Profile',
+      role: 'Amdin',
       rtlTitle: "تانيا أندرو",
       avatar: process.env.VUE_APP_APP_BASE_URL + "/img/faces/marc.jpg"
     };

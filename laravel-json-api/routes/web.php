@@ -14,3 +14,24 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/roles', 'PermissionController@Permission');
+
+Route::group(['middleware' => 'role:developer'], function() {
+
+    Route::get('/myrole', function() {
+
+        return 'Welcome Developer';
+
+    });
+
+});
+
+Route::group(['middleware' => 'role:manager'], function() {
+
+    Route::get('/myrole', function() {
+
+        return 'Welcome Manager';
+
+    });
+
+});

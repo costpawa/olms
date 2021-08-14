@@ -26,6 +26,8 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->get('me', 'Api\V1\MeController@readProfile');
     $api->patch('me', 'Api\V1\MeController@updateProfile');
 
+    $api->get('get-user-role', 'Api\V1\UserRoleController@getUserRole');
+
     $api->resource('users');
     $api->resource('books');
     $api->resource('authors');

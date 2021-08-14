@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
         DB::table('members')->truncate();
         DB::table('member_types')->truncate();
         DB::table('punishments')->truncate();
+        DB::table('roles')->truncate();
+        DB::table('permissions')->truncate();
         Schema::enableForeignKeyConstraints();
 
         $this->call(UsersSeeder::class);
@@ -34,5 +36,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MemberSeeder::class);
         $this->call(MemberTypeSeeder::class);
         $this->call(PunishmentSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(PermissionSeeder::class);
     }
 }
