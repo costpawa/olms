@@ -3,7 +3,6 @@
 namespace App\JsonApi\V1\Users;
 
 use Illuminate\Validation\Rule;
-use CloudCreativity\LaravelJsonApi\Rules\HasMany;
 use CloudCreativity\LaravelJsonApi\Validation\AbstractValidators;
 
 class Validators extends AbstractValidators

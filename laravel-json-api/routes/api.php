@@ -28,7 +28,9 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
 
     $api->get('get-user-role', 'Api\V1\UserRolePermissionController@getUserRole');
 
-    $api->resource('users');
+    $api->resource('users')->relationships(function ($relations) {
+        $relations->hasMany('user-roles');
+    });
     $api->resource('books');
     $api->resource('authors');
     $api->resource('genres');
@@ -37,7 +39,9 @@ JsonApi::register('v1')->middleware('auth:api')->routes(function ($api) {
     $api->resource('members');
     $api->resource('member-types');
     $api->resource('punishments');
-    $api->resource('roles');
+    $api->resource('roles')->relationships(function ($relations) {
+        $relations->hasOne('user');
+    });
     $api->resource('permissions');
 
 });

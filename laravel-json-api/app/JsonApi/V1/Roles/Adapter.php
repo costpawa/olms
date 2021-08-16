@@ -6,7 +6,7 @@ use CloudCreativity\LaravelJsonApi\Eloquent\AbstractAdapter;
 use CloudCreativity\LaravelJsonApi\Pagination\StandardStrategy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
-use Spatie\Permission\Models\Role;
+use App\Models\UserRole;
 
 class Adapter extends AbstractAdapter
 {
@@ -32,7 +32,7 @@ class Adapter extends AbstractAdapter
      */
     public function __construct(StandardStrategy $paging)
     {
-        parent::__construct(new Role(), $paging);
+        parent::__construct(new UserRole(), $paging);
     }
 
     /**
@@ -44,5 +44,11 @@ class Adapter extends AbstractAdapter
     {
         $this->filterWithScopes($query, $filters);
     }
+
+    protected function user()
+    {
+        return $this->hasOne();
+    }
+
 
 }

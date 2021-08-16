@@ -63,7 +63,7 @@ return [
         'members' => \App\Models\Member::class,
         'member-types' => \App\Models\MemberType::class,
         'punishments' => \App\Models\Punishment::class,
-        'roles' => \Spatie\Permission\Models\Role::class,
+        'roles' => \App\Models\UserRole::class,
         'permissions' => \Spatie\Permission\Models\Permission::class,
     ],
 

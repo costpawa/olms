@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Notifications\Notifiable;
@@ -39,11 +40,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function __construct()
-    {
-        $this->getAllPermissions();
-    }
 
     /**
      * Mutator for hashing the password on save
@@ -85,5 +81,13 @@ class User extends Authenticatable
     public function scopeEmail($query, $email)
     {
         return $query->where('users.email', 'LIKE', "%$email%", 'or');
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function userRoles(): HasMany
+    {
+        return $this->hasMany('App\Models\UserRole');
     }
 }

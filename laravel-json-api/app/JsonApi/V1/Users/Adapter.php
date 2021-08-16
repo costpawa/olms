@@ -3,6 +3,7 @@
 namespace App\JsonApi\V1\Users;
 
 use App\Models\User;
+use CloudCreativity\LaravelJsonApi\Document\ResourceObject;
 use CloudCreativity\LaravelJsonApi\Eloquent\AbstractAdapter;
 use CloudCreativity\LaravelJsonApi\Pagination\StandardStrategy;
 use Illuminate\Database\Eloquent\Builder;
@@ -26,6 +27,13 @@ class Adapter extends AbstractAdapter
     protected $filterScopes = [];
 
     /**
+     * User's role for assignment
+     *
+     * @var mixed
+     */
+    protected $role;
+
+    /**
      * Adapter constructor.
      *
      * @param StandardStrategy $paging
@@ -43,5 +51,24 @@ class Adapter extends AbstractAdapter
     protected function filter($query, Collection $filters)
     {
         $this->filterWithScopes($query, $filters);
+    }
+
+    protected function created(User $user): void
+    {
+        if(!is_null($user->user_roles)) {
+            foreach($user->user_roles as $role) {
+                $user->assignRole($role);
+            }
+        }
+        if(!is_null($user->user_permissions)) {
+            foreach($user->user_permissions as $permission) {
+                $user->givePermissionTo($permission);
+            }
+        }
+    }
+
+    protected function userRoles()
+    {
+        return $this->hasMany();
     }
 }

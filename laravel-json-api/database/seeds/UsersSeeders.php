@@ -2,8 +2,6 @@
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
 
 class UsersSeeder extends Seeder
 {
@@ -14,14 +12,22 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-//        Schema::disableForeignKeyConstraints();
-//        DB::table('users')->truncate();
-//        Schema::enableForeignKeyConstraints();
-
         User::create([
             'name' => 'Admin',
             'email' => 'admin@material.com',
             'password' => 'secret'
+        ]);
+
+        User::create([
+            'name' => 'Manager',
+            'email' => 'manager@olms.com',
+            'password' => '123456',
+        ]);
+
+        User::create([
+            'name' => 'Editor',
+            'email' => 'editor@olms.com',
+            'password' => '123456',
         ]);
     }
 }
